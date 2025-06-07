@@ -13,7 +13,7 @@ function homeAction(PDO $connexion)
     $authors = \App\Models\AuthorsModel\findAll($connexion);
 
     global $content, $title;
-    $title = "HomePage";
+    $title = "Page d'accueil";
     ob_start();
     include '../app/views/pages/home.php';
     $content = ob_get_clean();
