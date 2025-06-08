@@ -1,7 +1,11 @@
 <?php
 //ROUTER PRINCIPAL
+if (isset($_GET['authors'])):
 
-if (isset($_GET['photos'])):
+    include_once '../app/controllers/authorsControllers.php';
+    \App\Controllers\AuthorsControllers\indexAction($connexion);
+
+elseif (isset($_GET['photos'])):
 
     include_once '../app/controllers/photosControllers.php';
     \App\Controllers\PhotosControllers\indexAction($connexion);
